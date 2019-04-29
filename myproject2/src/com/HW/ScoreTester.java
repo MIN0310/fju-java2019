@@ -1,5 +1,6 @@
 package com.HW;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ScoreTester {
@@ -14,7 +15,16 @@ public class ScoreTester {
 			int english = scanner.nextInt();
 			scanner.nextLine();
 			int average = (math + english)/2;
-			System.out.println("平均:" + average);
-	}
+			
+			if(math>100 || english>100 || math<0 || english<0) {
+				System.out.println("數值超過範圍");
+			}else if(math<=100 && english<=100 && math>=0 && english>0) {
+				System.out.println("平均:" + average);
+			}
+			
+		} catch(InputMismatchException e){
+			System.out.println("數值格式錯誤");
+		}
 
+	}
 }
