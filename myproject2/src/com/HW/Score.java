@@ -1,18 +1,13 @@
 package com.HW;
 
 public class Score {
-	int math;
-	int english;
+	int value;
 	
-	public Score(int math, int english) {
-		this.math = math;
-		this.english = english;
+	public Score(String s) throws ScoreFormatException{
+		try {
+			value = Integer.parseInt(s);
+		}catch(NumberFormatException e) {
+			throw new ScoreFormatException();
+		}
 	}
-	public void value() {
-		
-	}
-	public void getMessage() {
-		System.out.println("資料錯誤");
-	}
-	
 }

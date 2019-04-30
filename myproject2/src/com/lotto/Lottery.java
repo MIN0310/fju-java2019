@@ -10,9 +10,11 @@ public class Lottery {
 		System.out.print("多少人中獎?");
 		int people = scanner.nextInt();
 		scanner.nextLine();
-		/*或是
+		/*或
 		String p = scanner.nextLine();
 		int people = Integer.parseInt(p);
+		或
+		int people = Integer.parseInt(scanner.nextLine());
 		*/
 		int money = bonus/people;
 		System.out.println("每人得:" + money);

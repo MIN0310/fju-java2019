@@ -18,6 +18,8 @@ public class LotteryException {
 			System.out.println("數值運算錯誤");
 		} catch( NumberFormatException e) {
 			System.out.println("數值格式錯誤");
+//		} catch( Exception e) {
+//			System.out.println("數值輸入錯誤);
 		}
 	}
 
